@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const Joi = require("joi");
 
 const projectSchema = new mongoose.Schema({
-    // id: { type: String, required: true },
 	name: { type: String, required: true },
 	details: { type: String, required: true },
 	code: { type: String, required: true },
