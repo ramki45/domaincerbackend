@@ -13,8 +13,8 @@ router.post("/", async (req, res) => {
 				.status(409)
 				.send({ message: "Project with given name already Exist!" });
 
-		 const salt = await bcrypt.genSalt(Number(process.env.SALT));
-		 const hashPassword = await bcrypt.hash(req.body.password, salt);
+		//  const salt = await bcrypt.genSalt(Number(process.env.SALT));
+		//  const hashPassword = await bcrypt.hash(req.body.password, salt);
 
 		await new Project({ ...req.body}).save();
 		res.status(201).send({ message: "Project created successfully" });
